@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Case 01 — 把 AI 落地到傳統產業 / Landing AI in a Non-Digital Industry';
+const description = '在一家幾乎全靠紙本與人工的傳統建材通路、把「半天的報價」變成「30 秒產 PDF」、把「現場手量手畫 CAD」變成「手機掃一掃 DXF 自動出來」。';
+const work = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Landing AI in a Traditional Building-Materials Distributor',
+  author: { '@type': 'Person', name: 'Su Yi-Hung' },
+  about: 'Digitizing a non-engineer, paper-driven trade through targeted AI-driven closed loops.',
+  inLanguage: ['zh-Hant-TW', 'en-US'],
+};
+---
+<BaseLayout title={title} description={description} jsonLd={work}>
+  <p class="meta"><a href="/">← back</a> · Case 01 of 4</p>
+
+  <h1>把 AI 落地到一個「沒有工程師」的傳統產業<br/><span style="font-size: 0.55em; color: var(--muted); font-style: italic;">Landing AI in a Traditional, Non-Digital Industry</span></h1>
+
+  <p class="meta">🔴 去識別化:主詞用「某傳統建材通路商」、不露公司名 / 客戶 / 內部資料。數字只用真實可驗證的流程改善。</p>
+
+  <p class="lang">🇹🇼 中文</p>
+
+  <h3>一句話</h3>
+  <p>在一家幾乎全靠紙本與人工的傳統建材通路、我把「一份要喬半天的報價單」變成「<strong>填一筆、三十秒產出</strong>」、還把「現場手量、回辦公室手畫 CAD」變成「拿手機<strong>掃一掃,圖自動出來</strong>」。</p>
+
+  <h3>問題</h3>
+  <p>傳統產業最難的、不是技術、是<strong>那裡沒有工程師、流程全長在人身上</strong>。</p>
+  <p>報價靠老手憑經驗算、靠 Excel 一格一格填;丈量靠捲尺量完回辦公室再手畫 CAD;客戶資料散在每個業務各自的本子裡。</p>
+  <p>每一步都「能動」、但每一步都吃人、都慢、都會錯。導入數位化的最大障礙、是這裡的人沒時間、也沒人懂工具。</p>
+
+  <h3>怎麼用 AI 落地</h3>
+  <p>我沒有要他們「全面數位轉型」——那會失敗。我挑了最痛、最高頻的兩個點、各做一條閉環:</p>
+  <ol>
+    <li><strong>報價自動化</strong>:把報價邏輯做成一套模板 + 腳本。業務在一張表填客戶與品項、<strong>三十秒內自動產出 PDF 報價單</strong>、自動落地、自動編版本號、手機端也看得到狀態。把整條銷售鏈(調研 → 洽談 → 出報價 → 回簽 → 通知施工)串成一條、客戶資料第一次有了統一的資料庫。</li>
+    <li><strong>丈量自動轉 CAD</strong>:用 iPhone 的 LiDAR 掃描房間、<strong>自動輸出 DXF 檔</strong>、AutoCAD 直接打開就能出圖。原本「現場量 + 回辦公室手畫」的兩段工、壓成一次掃描。</li>
+  </ol>
+  <p>關鍵不是工具多炫、是我<strong>懂這個產業的流程</strong>——知道哪一步是真痛點、哪一步動了會被現場排斥。這是外來的工程師做不到的。</p>
+
+  <h3>量化結果(真實、可驗證)</h3>
+  <ul>
+    <li>報價:從「老手喬半天」→ <strong>填一筆、三十秒產出 PDF</strong>、版本不再混亂。</li>
+    <li>丈量:從「現場手量 + 回辦公室手畫 CAD」→ <strong>手機掃描自動出 DXF</strong>、少一整段工。</li>
+    <li>銷售流程:從各憑本事的零散動作 → 一條<strong>有客戶資料庫、有狀態追蹤</strong>的閉環。</li>
+  </ul>
+
+  <h3>這個案例證明什麼</h3>
+  <p>我能把 AI 落地到<strong>最不數位、最沒有工程師、流程全靠人</strong>的真實營運場景——而且落地的點、是我用十幾年產業經驗挑出來的。<strong>AI 落地到傳統產業、難的從來不是技術、是有沒有人同時懂這行的流程、又懂怎麼讓機器接手。</strong>我剛好兩邊都站。</p>
+
+  <p class="lang">🇬🇧 English</p>
+
+  <h3>One-liner</h3>
+  <p>At a traditional building-materials distributor that ran almost entirely on paper and manual work, I turned "a quote that took half a day to negotiate" into "<strong>fill one row, get it in thirty seconds</strong>," and turned "measure on site, then hand-draw the CAD back at the office" into "<strong>scan it with a phone, and the drawing comes out by itself.</strong>"</p>
+
+  <h3>The Problem</h3>
+  <p>The hard part of a traditional industry isn't technology — it's that <strong>there are no engineers, and every process lives inside a person.</strong></p>
+  <p>Quotes are calculated by veterans from experience, filled cell by cell in Excel; measurements are taken with a tape measure and then hand-drawn into CAD back at the office; customer records sit scattered in each salesperson's own notebook.</p>
+  <p>Every step "works," but every step is human-bound, slow, and error-prone. The biggest barrier to digitizing isn't the tech — it's that the people here have no time, and no one who understands the tools.</p>
+
+  <h3>How I Landed AI on It</h3>
+  <p>I didn't push a "full digital transformation" — that fails. I picked the two most painful, highest-frequency points and built a closed loop for each:</p>
+  <ol>
+    <li><strong>Quote automation</strong> — turned the quoting logic into a template plus a script. A salesperson fills in customer and items on one sheet, and a <strong>PDF quote is generated automatically within thirty seconds</strong>, auto-saved, auto-versioned, with status visible on mobile. The whole sales chain (research → negotiation → quote → signed return → notify construction) became one connected flow, and customer data had a single database for the first time.</li>
+    <li><strong>Measurement-to-CAD</strong> — scan a room with the iPhone's LiDAR and <strong>export a DXF automatically</strong>, ready to open straight in AutoCAD. What used to be two jobs ("measure on site" + "hand-draw at the office") collapsed into a single scan.</li>
+  </ol>
+  <p>The point wasn't a flashy tool — it was that <strong>I understand this industry's workflow</strong>: which step is the real pain, and which step, if touched, gets rejected by the people on the floor. An outside engineer can't do that.</p>
+
+  <h3>Measurable Results (real, verifiable)</h3>
+  <ul>
+    <li>Quotes: from "a veteran negotiating for half a day" → <strong>fill one row, PDF in thirty seconds</strong>, no more version chaos.</li>
+    <li>Measurement: from "measure on site + hand-draw CAD at the office" → <strong>phone scan, automatic DXF</strong>, an entire job removed.</li>
+    <li>Sales process: from scattered, improvised actions → <strong>a closed loop with a customer database and status tracking.</strong></li>
+  </ul>
+
+  <h3>What This Case Proves</h3>
+  <p>I can land AI in the most un-digital, engineer-free, fully human-run operation there is — and the points where I landed it were chosen with a decade-plus of industry experience. <strong>Landing AI in a traditional industry was never about the technology; it's about whether someone understands both the trade's workflow and how to hand it to a machine.</strong> I happen to stand on both sides.</p>
+
+  <p class="meta"><a href="/cases/case2">Next: Case 02 — A Non-Engineer Who Shipped 30+ Apps →</a></p>
+</BaseLayout>

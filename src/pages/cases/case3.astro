@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Case 03 — 單人內容自動化產線 / The Content Automation Pipeline';
+const description = '一個人、一台 Mac mini、把「每天產一支跨三平台社群影片」變成一條不用插手的產線。已自主產出並上架 32 支經機器自我查證的影片。';
+const work = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Solo Daily Cross-Platform Content Pipeline',
+  author: { '@type': 'Person', name: 'Su Yi-Hung' },
+  about: 'A solo-designed automation pipeline producing self-verified videos across FB / YT / IG.',
+  inLanguage: ['zh-Hant-TW', 'en-US'],
+};
+---
+<BaseLayout title={title} description={description} jsonLd={work}>
+  <p class="meta"><a href="/">← back</a> · Case 03 of 4</p>
+
+  <h1>內容自動化產線<br/><span style="font-size: 0.55em; color: var(--muted); font-style: italic;">The Content Automation Pipeline</span></h1>
+
+  <p class="meta">定位:本案是「元證據」——你現在看的這個作品集網站、它的相關內容、就是這套系統產出的延伸。</p>
+
+  <p class="lang">🇹🇼 中文</p>
+
+  <h3>一句話</h3>
+  <p>一個人、一台 Mac mini、把「每天產一支跨三平台社群影片」這件事、做成一條我幾乎不用插手的產線——到目前為止已自主產出並上架 <strong>32 支</strong>經過機器自我查證的影片。</p>
+
+  <h3>問題</h3>
+  <p>我的本業是工務副理、真正能碰個人專案的、一天只有一到三小時。</p>
+  <p>社群經營的殘酷現實是:它要「持續」才有用、但「持續」恰恰最吃時間——選題、寫稿、配音、做圖、剪輯、三個平台各自上傳、還要回頭確認有沒有發成功、有沒有重複發。</p>
+  <p>任何一步要人盯、這件事就撐不過兩個禮拜。</p>
+  <p>所以我沒有把它當「內容工作」做、我把它當「<strong>一條要被自動化的產線</strong>」來設計。</p>
+
+  <h3>怎麼用 AI 落地</h3>
+  <p>我把整條鏈拆成可被機器接手的關卡、每一關都有明確的輸入、輸出與守門條件:</p>
+  <ol>
+    <li><strong>選題</strong>:四支柱主題輪替、自動排出下一支該做什麼。</li>
+    <li><strong>腳本</strong>:依一套敘事骨架生稿、再由我做最後的語氣與事實把關(人不退場的那一關)。</li>
+    <li><strong>配音</strong>:用我本人聲音的克隆模型轉語音、斷句先過我耳朵才往下走。</li>
+    <li><strong>畫面</strong>:文字卡 + 逐段生成的背景圖、生圖強制帶負面條件、每張機器 + 人雙重檢查、杜絕亂生人物或文字。</li>
+    <li><strong>雙重守門</strong>:發布前先過「內容守門員」(紅線檢查)與「規格守門員」(尺寸 / 格式 / 長度、各平台規則不同)。</li>
+    <li><strong>發布 + 自我查證閉環</strong>:發到 Facebook / YouTube / Instagram、<strong>發完機器再回讀線上貼文</strong>、確認它真的存在、標題沒被改、才寫進已發清單;內建防重複發機制、避免同一支被發兩次。</li>
+  </ol>
+  <p>關鍵設計原則:<strong>人只留在機器無法替代的那 10%</strong>——也就是最終的判斷與品味(語氣對不對、事實真不真、這題能不能碰)。其餘 90% 全部交給流程。</p>
+
+  <h3>量化結果</h3>
+  <ul>
+    <li><strong>32 支</strong>影片自主產出並上架、橫跨 <strong>3 個平台</strong>(FB / YT / IG)。</li>
+    <li>每支發布走「發 → API 回讀自證 → 防重發」閉環、<strong>不靠人去平台一個個確認</strong>。</li>
+    <li>從「丟一個主題」到「三平台上架」、我的實際介入縮到只剩<strong>兩個動作</strong>:過稿、聽一次斷句。</li>
+    <li>邊際成本趨近於零:多產一支的力氣、不隨數量線性增加。</li>
+  </ul>
+
+  <h3>用到的技術</h3>
+  <p>語音克隆 TTS、文生圖(本機擴散模型)、無頭瀏覽器截圖 + 影片合成、各平台官方 API、API 回讀自證、防重入(idempotency)設計、排程。整條線單人設計、單人維運。</p>
+
+  <h3>這個案例證明什麼</h3>
+  <p>我不是工程師出身。但我能把一件「聽起來要一個小團隊每天做」的事、拆解成一條一個人就能養、而且養得起的自動化系統。<strong>AI 落地的本事、不在會不會寫程式、在於分得清哪一步該交給機器、哪一步必須留給人。</strong></p>
+
+  <p class="lang">🇬🇧 English</p>
+
+  <h3>One-liner</h3>
+  <p>One person, one Mac mini — I turned "publish a short social video across three platforms every day" into a pipeline I barely have to touch. To date it has autonomously produced and shipped <strong>32 machine-self-verified videos</strong>.</p>
+
+  <h3>The Problem</h3>
+  <p>My day job is a site operations manager. The time I can spend on personal projects is one to three hours a day.</p>
+  <p>Social media has a brutal rule: it only works if it's <em>consistent</em> — and consistency is exactly what eats time. Pick a topic, write the script, voice it, make the visuals, edit, upload to three platforms separately, then go back and confirm each one actually posted and wasn't duplicated.</p>
+  <p>If any step needs a human watching it, the whole thing dies within two weeks.</p>
+  <p>So I didn't treat this as "content work." I designed it as <strong>a production line to be automated.</strong></p>
+
+  <h3>How I Landed AI on It</h3>
+  <p>I broke the chain into machine-ownable stages, each with a clear input, output, and gate:</p>
+  <ol>
+    <li><strong>Topic</strong> — four content pillars on rotation; the system queues what's next.</li>
+    <li><strong>Script</strong> — drafted against a narrative framework, then a final human pass for tone and factual accuracy (the step a human never leaves).</li>
+    <li><strong>Voice</strong> — text-to-speech using a clone of my own voice; phrasing is approved by ear before anything proceeds.</li>
+    <li><strong>Visuals</strong> — text cards over per-segment generated backgrounds; image generation runs with hard negative constraints and a machine-plus-human check on every frame to prevent stray people or text.</li>
+    <li><strong>Dual gatekeeping</strong> — before publishing, a <em>content gate</em> (red-line checks) and a <em>spec gate</em> (size/format/length, different per platform).</li>
+    <li><strong>Publish + self-verification loop</strong> — posts to Facebook / YouTube / Instagram, then <strong>reads each live post back via API</strong> to confirm it truly exists and the caption wasn't altered before logging it; a built-in idempotency guard prevents the same video being posted twice.</li>
+  </ol>
+  <p>Core principle: <strong>the human stays only in the 10% a machine can't replace</strong> — final judgment and taste (is the tone right, is the fact true, is this topic safe to touch). The other 90% is owned by the process.</p>
+
+  <h3>Measurable Results</h3>
+  <ul>
+    <li><strong>32 videos</strong> produced and shipped autonomously across <strong>3 platforms</strong>.</li>
+    <li>Every publish runs a "post → API read-back → dedupe" loop — <strong>no human checks platforms one by one.</strong></li>
+    <li>From "drop a topic" to "live on three platforms," my hands-on involvement shrank to <strong>two actions</strong>: approve the script, listen to the phrasing once.</li>
+    <li>Marginal cost approaches zero — the effort to ship one more does not scale with volume.</li>
+  </ul>
+
+  <h3>Tech Used</h3>
+  <p>Voice-clone TTS, text-to-image (local diffusion), headless-browser capture + video composition, official platform APIs, API read-back verification, idempotency design, scheduling. Designed and operated solo.</p>
+
+  <h3>What This Case Proves</h3>
+  <p>I'm not a trained engineer. But I can take something that "sounds like it needs a small team doing it daily" and break it into an automated system one person can run — and afford to run. <strong>The skill of landing AI isn't whether you can code; it's knowing exactly which step belongs to the machine, and which must stay with a human.</strong></p>
+
+  <p class="meta"><a href="/cases/case2">← Case 02</a> · <a href="/cases/case4">Case 04 — 20 Years of Site Judgment →</a></p>
+</BaseLayout>
